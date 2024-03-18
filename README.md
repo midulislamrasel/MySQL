@@ -70,7 +70,7 @@ VALUES
 ### show data from Tables with SQL
 
     ```sql
-        SELECT id, name, age
+        SELECT column1, column2, column3
         FROM table_name;
 
     ```
