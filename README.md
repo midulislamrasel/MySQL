@@ -74,9 +74,7 @@ VALUES
 
 ### shwo data all
 
-    ```sql
     SELECT * FROM table_name;
-    ```
 
 ### chang Name Title Bar
 
@@ -97,11 +95,8 @@ VALUES
 
 ### SELECT With WHERE Clause
 
-    ```mysql
         SELECT column1, column2, column3
         FROM table_name
-        WHERE condition;
-    ```
 
 ### Less than or Equal
 
