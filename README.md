@@ -69,11 +69,8 @@ VALUES
 
 ### show data from Tables with SQL
 
-    ```sql
-        SELECT column1, column2, column3
-        FROM table_name;
-
-    ```
+    SELECT column1, column2, column3
+    FROM table_name;
 
 ### shwo data all
 
