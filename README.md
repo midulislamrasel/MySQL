@@ -70,7 +70,6 @@ VALUES
 ### show data from Tables with SQL
 
     ```php
-
         SELECT column1, column2, column3
         FROM table_name;
 
@@ -109,3 +108,13 @@ VALUES
         FROM table_name
         WHERE condition;
     ```
+
+### Less than or Equal
+
+```php
+
+SELECT *
+From personal
+where age <=20;
+
+```
