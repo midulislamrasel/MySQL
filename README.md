@@ -184,3 +184,63 @@ where age BETWEEN 1998-01-01 AND 1998-06-30
 SELECT * FROM personal
 where age NOT BETWEEN 1998-01-01 AND 1998-06-30
 ```
+
+### LIKE OPERATOR
+
+###### % Percentage Sing: Repesent Zero, one or Multiple Chareacters
+
+```sql
+SELECT * FROM personal
+where name like "s%";
+```
+
+Start with "a"
+
+```sql
+SELECT * FROM personal
+where name like "%s";
+```
+
+End with "a"
+
+```sql
+SELECT * FROM personal
+where name like "%sa%";
+```
+
+Have "sa" in any Position
+
+```sql
+SELECT * FROM personal
+where name like "s%a";
+```
+
+start with "a" and Ends with "m"
+
+```sql
+SELECT * FROM personal
+where name like "_a%";
+```
+
+"a"in the Second Position
+
+```sql
+SELECT * FROM personal
+where name like "__a%";
+```
+
+"a"in the third Position
+
+```sql
+SELECT * FROM personal
+where name like "__oy";
+```
+
+"o" in the second and "y" in the third Position
+
+```sql
+SELECT * FROM personal
+where BINARY name like "__oy";
+```
+
+case in sensetive
