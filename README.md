@@ -74,17 +74,13 @@ VALUES
 
 ### shwo data all
 
-    ```sql
-        SELECT *
-        FROM table_name;
-    ```
+    SELECT *
+    FROM table_name;
 
 ### chang Name Title Bar
 
-    ```sql
-        SELECT id AS ID, name AS "Full Name", age AS Age
-        FROM table_name;
-    ```
+    SELECT id AS ID, name AS "Full Name", age AS Age
+    FROM table_name;
 
 ### WHERE Comoparison Operator
 
@@ -100,7 +96,7 @@ VALUES
 
 ### SELECT With WHERE Clause
 
-    ```sql
+    ```mysql
         SELECT column1, column2, column3
         FROM table_name
         WHERE condition;
