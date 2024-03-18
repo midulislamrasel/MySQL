@@ -1,6 +1,6 @@
 #### Create table
 
-```php
+```sql
 create Table student(
     id INT,
     name VARCHAR(50),
@@ -11,7 +11,7 @@ create Table student(
 
 ### Insert Data in Tables
 
-```php
+```sql
 INSERT INTO student (
         id,
         name,
@@ -30,7 +30,7 @@ INSERT INTO student (
 
 ### Insert Multiple Rows
 
-```php
+```sql
 INSERT INTO student (id, name, phone, birth_date, gender)
 VALUES
 (1, "Jony", "04576530", "2001-09-10", "F"),
@@ -55,7 +55,7 @@ VALUES
     -FORELGN KEY
     -PRIMAEY KEY
 
-```php
+```sql
     CREATE TABLE student(
         id INT NOT NULL UNIQUE,
         name VARCHAR(50) NOT NULL,
@@ -69,7 +69,7 @@ VALUES
 
 ### show data from Tables with SQL
 
-    ```
+    ```sql
         SELECT column1, column2, column3
         FROM table_name;
 
@@ -77,14 +77,14 @@ VALUES
 
 ### shwo data all
 
-    ```PHP
+    ```sql
         SELECT *
         FROM table_name;
     ```
 
 ### chang Name Title Bar
 
-    ```PHP
+    ```sql
         SELECT id AS ID, name AS "Full Name", age AS Age
         FROM table_name;
     ```
@@ -103,7 +103,7 @@ VALUES
 
 ### SELECT With WHERE Clause
 
-    ```PHP
+    ```sql
         SELECT column1, column2, column3
         FROM table_name
         WHERE condition;
@@ -111,7 +111,7 @@ VALUES
 
 ### Less than or Equal
 
-```php
+```sql
 
 SELECT *
 From personal
