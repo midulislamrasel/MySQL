@@ -66,3 +66,46 @@ VALUES
     );
 
 ```
+
+### show data from Tables with SQL
+
+    ```php
+
+        SELECT column1, column2, column3
+        FROM table_name;
+
+    ```
+
+### shwo data all
+
+    ```PHP
+        SELECT *
+        FROM table_name;
+    ```
+
+### chang Name Title Bar
+
+    ```PHP
+        SELECT id AS ID, name AS "Full Name", age AS Age
+        FROM table_name;
+    ```
+
+### WHERE Comoparison Operator
+
+1. = Equal
+2. > Geater Than
+3. < Less Than
+4. > = Lreate than or Equal
+5. <= Less than or Equal
+6. <> or != NOT equal
+7. BETWEEN Between a cerain range
+8. LIKE Search for a pattern
+9. IN To specify multiple possible values for a column
+
+### SELECT With WHERE Clause
+
+    ```PHP
+        SELECT column1, column2, column3
+        FROM table_name
+        WHERE condition;
+    ```
