@@ -74,8 +74,9 @@ VALUES
 
 ### shwo data all
 
-    SELECT *
-    FROM table_name;
+    ```sql
+    SELECT * FROM table_name;
+    ```
 
 ### chang Name Title Bar
 
