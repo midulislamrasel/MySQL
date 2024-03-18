@@ -107,3 +107,80 @@ From personal
 where age <=20;
 
 ```
+
+### NOT equal
+
+```sql
+    SELECT * FROM student
+    where gender !="F"
+```
+
+### show name and Id
+
+```sql
+SELECT name, br_date FROM student
+where gender !="F";
+```
+
+### AND OR NOR
+
+### AND
+
+##### all condison true show ans
+
+```sql
+SELECT * FROM personal
+where age=29 and city ="MIRPUR";
+```
+
+### OR
+
+##### one and more condison treu shwo ans
+
+```sql
+SELECT * FROM personal
+where age=19 OR city ="MIRPUR";
+```
+
+```sql
+SELECT * FROM personal
+where (age=19 OR city ="MIRPUR") and name = "Mahodi";
+```
+
+### NOT
+
+```sql
+SELECT * FROM personal
+where not (age=19 OR city ="MIRPUR");
+```
+
+### IN OPERATOR
+
+```sql
+SELECT * FROM personal
+where age In(29,21)
+```
+
+### NOT IN
+
+```sql
+SELECT * FROM personal
+where age NOT In(29,21)
+```
+
+### BETWEEN OPERATOR
+
+```sql
+SELECT * FROM personal
+where age BETWEEN(29 and 21)
+```
+
+```sql
+SELECT * FROM personal
+where age BETWEEN 1998-01-01 AND 1998-06-30
+```
+
+```sql
+SELECT * FROM personal
+where age NOT BETWEEN 1998-01-01 AND 1998-06-30
+```
