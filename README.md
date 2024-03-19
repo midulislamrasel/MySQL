@@ -427,3 +427,10 @@ UPDATE Personal
 SET phone = "2323234" , age = 23
 WHERE id IN(3,5);
 ```
+
+## Commit & Rollback
+
+### Rollback
+
+1. INSERT
+2. UPDATESS
