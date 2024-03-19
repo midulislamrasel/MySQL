@@ -244,3 +244,186 @@ where BINARY name like "__oy";
 ```
 
 case in sensetive
+
+### Regular Expression
+
+```
+^ => Beginning of string
+$ => End of string
+[...]=> Any chareter listed between the square brackets
+^[..]=> Begins with any charachter listed between the square brackers
+[a-z]=> Match With in the range
+p1|p2|p3 => Matches any of the patterns p1,p2,p3
+```
+
+### Regular Expression
+
+```sql
+SELECT * FROM personal
+where name regexp "ru"
+```
+
+```sql
+SELECT * FROM personal
+where name regexp "^a"
+```
+
+```sql
+SELECT * FROM personal
+where name regexp "k$"
+```
+
+```sql
+SELECT * FROM personal
+where name regexp "k$"
+```
+
+```sql
+SELECT * FROM personal
+where name regexp "mahodi|Manik|Ajharul"
+```
+
+```sql
+SELECT * FROM personal
+where name regexp "^mahodi|Manik|^Ajharul"
+```
+
+```sql
+SELECT * FROM personal
+where name regexp '[i]'
+```
+
+```sql
+SELECT * FROM personal
+where name regexp '[iskj]a'
+```
+
+ia ,sa,ka,ja
+
+```sql
+SELECT * FROM personal
+where name regexp 'a[iskj]'
+```
+
+ai ,as,ak,aj
+
+```sql
+SELECT * FROM personal
+where name regexp '^[iskj]a'
+```
+
+SELECT \* FROM personal
+order by name ASC
+
+start a to j and last r
+
+### ORDER BY & DISTINCT
+
+```sql
+SELECT * FROM personal
+ORDER BY name , age ,.... ASC | DESC
+```
+
+```sql
+SELECT * FROM personal
+order by name DESC
+```
+
+```sql
+SELECT * FROM personal
+Where city = "meherpur"
+order by name, age desc;
+```
+
+### DISTINCT
+
+```sql
+SELECT  DISTNCT column1, column2,column3 FROM student;
+```
+
+### IS NULL
+
+```sql
+SELECT column1,column2,.... FROM table_name WHERE IS NULL
+```
+
+```sql
+SELECT column1,column2,.... FROM table_name WHERE IS NOT NULL
+```
+
+### SELECT DATA WITH LIMIT
+
+```sql
+SELECT column1,column2,.... FROM table_name WHERE condition / opsonal
+LIMIT number
+```
+
+```sql
+SELECT *FROM table_name
+LIMIT 2;
+```
+
+```sql
+SELECT * FROM personal
+where city = "kulna"
+order by name
+ limit 10
+```
+
+### OFFSET
+
+```sql
+SELECT column1,column2,.... FROM table_name WHERE condition / opsonal
+LIMIT offset number
+```
+
+```sql
+SELECT * FROM personal
+where city = "kulna"
+order by name
+ limit 3 10
+```
+
+### SEKECT DATA WITH AGGREGATE Function
+
+0 COUNT
+1 MAX
+2 MIN
+3 SUM
+4 AVG
+
+```sql
+SELECT COUNT (colmn_name)
+FROM table_name
+WHERE condition/Opsonal
+```
+
+```sql
+SELECT MIN(mark) as Mark name,city
+FROM table_name
+WHERE condition/Opsonal
+```
+
+### UPDATE
+
+```sql
+UPDATE Personal
+SET phone = "2323234"
+WHERE id = 5;
+```
+
+###### Multipule change
+
+```sql
+UPDATE Personal
+SET phone = "2323234" , age = 23
+WHERE id = 5;
+```
+
+###### Multipole change ROW
+
+```sql
+UPDATE Personal
+SET phone = "2323234" , age = 23
+WHERE id IN(3,5);
+```
