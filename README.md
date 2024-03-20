@@ -509,6 +509,8 @@ CREATE TABLE student(
    ADD FOREINGN KEY(city)REFERENCES(cid)
 ```
 
+### Fack Deta
+
 ```sql
 CREATE TABLE Students (
     id INT PRIMARY KEY,
@@ -580,3 +582,17 @@ INSERT INTO Students (id, name, age, dateofbirth, father_name, mother_name, city
 (52, 'Liam Lee', 20, '2004-11-20', 'Samuel Lee', 'Sophia Lee', 'Los Angeles', '123-456-7890', 'Literature', 88, 'B', 'A-'),
 
 ```
+
+### Inner join
+
+the inner join selcts records that have mathching values in both tables
+
+| ID  | Name | age | city |
+| --- | ---- | --- | ---- |
+| 1   | Ram  | 19  | Dka  |
+| 2   | khan | 18  | Kal  |
+
+| ID  | Name | age | city |
+| --- | ---- | --- | ---- |
+| 1   | Ram  | 19  | Dka  |
+| 2   | khan | 18  | Kal  |
