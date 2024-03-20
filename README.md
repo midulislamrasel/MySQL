@@ -434,3 +434,77 @@ WHERE id IN(3,5);
 
 1. INSERT
 2. UPDATESS
+3. DELETE
+
+### Rollback Function
+
+```sql
+SELECT * FROM personal;
+COMMIT;
+UPDATE personal SET age = 20;
+WHERE id = 3;
+
+ROLLBACK;
+
+```
+
+### DELETE From Tables
+
+```sql
+COMMIT;
+
+Delete from personal
+where age = 20;
+
+rollback;
+
+```
+
+### PRIMARY KEY
+
+FIRST TIME TABLE CREARE
+
+```sql
+CREATE  table_name(
+    id INT NULL AUTO_INCREMENT,
+    name VARCHAR(30)NOT NULL,
+    age INT NOT NULL,
+    city VARCHAR(10)NOT NULL
+    PRIMARY KEY (id)
+)
+
+```
+
+ALLRADY TABLE CREATE A TABLE
+
+```sql
+ALTER TABLE table_name
+ADD PRIMARY KEY(id)
+
+```
+
+### FOREIGN key comstraint
+
+- A foreign key is a key used to link two tables together.
+- A forengn key in one table used to point primary key in another table
+
+##### FIRST TIME TABLE CREATE
+
+```sql
+CREATE TABLE student(
+    id INT NULL AUTO_INCREMENT,
+    name   VARCHARE(50)NOT NULL,
+    age  INT NOT NULL,
+    city VARCHAR(20)NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (city) REFERENCES city(cid)
+)
+
+```
+
+##### ALL READY CREAT A TABLE
+
+```sql
+   ALTER TABLE table_name
+   ADD FOREINGN KEY(city)REFERENCES(cid)
+```
