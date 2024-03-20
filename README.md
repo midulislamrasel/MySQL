@@ -508,3 +508,48 @@ CREATE TABLE student(
    ALTER TABLE table_name
    ADD FOREINGN KEY(city)REFERENCES(cid)
 ```
+
+```sql
+INSERT INTO students (id, name, age, dateofbirth, father_name, mother_name, city, phone, subject, mark, student_group, blood_group)
+VALUES
+(1, 'John Smith', 20, '2004-05-10', 'Michael Smith', 'Emily Smith', 'New York', '123-456-7890', 'Mathematics', 85, 'A', 'O+'),
+(2, 'Alice Johnson', 19, '2005-03-15', 'David Johnson', 'Sarah Johnson', 'Los Angeles', '987-654-3210', 'Science', 78, 'B', 'A-'),
+(3, 'Emma Brown', 21, '2003-11-20', 'James Brown', 'Olivia Brown', 'Chicago', '234-567-8901', 'Literature', 92, 'A', 'B+'),
+(4, 'Ethan Lee', 20, '2004-07-05', 'William Lee', 'Sophia Lee', 'Houston', '345-678-9012', 'History', 80, 'C', 'AB+'),
+(5, 'Sophia Wang', 22, '2002-09-30', 'Ethan Wang', 'Grace Wang', 'San Francisco', '456-789-0123', 'Computer Science', 88, 'B', 'A+'),
+(6, 'Emily Davis', 19, '2005-01-25', 'Daniel Davis', 'Rachel Davis', 'Seattle', '567-890-1234', 'Chemistry', 79, 'A', 'B-'),
+(7, 'Michael Nguyen', 20, '2004-08-12', 'Kevin Nguyen', 'Lisa Nguyen', 'Miami', '678-901-2345', 'Physics', 88, 'B', 'O-'),
+(8, 'Olivia Martinez', 21, '2003-06-18', 'Benjamin Martinez', 'Sophia Martinez', 'Dallas', '789-012-3456', 'Economics', 90, 'A', 'A+'),
+(9, 'William Garcia', 18, '2006-02-03', 'Jacob Garcia', 'Isabella Garcia', 'Phoenix', '890-123-4567', 'Geography', 85, 'C', 'AB-'),
+(10, 'Mia Hernandez', 22, '2002-10-20', 'Alexander Hernandez', 'Ava Hernandez', 'Philadelphia', '901-234-5678', 'English', 92, 'B', 'B+'),
+(11, 'Ethan Miller', 19, '2005-04-08', 'Ryan Miller', 'Lily Miller', 'Boston', '012-345-6789', 'Biology', 82, 'A', 'O+'),
+(12, 'Chloe Brown', 20, '2004-11-15', 'Matthew Brown', 'Hailey Brown', 'Atlanta', '123-456-7890', 'Mathematics', 87, 'B', 'A-'),
+(13, 'Ava Wilson', 21, '2003-07-30', 'Nathan Wilson', 'Victoria Wilson', 'Denver', '234-567-8901', 'Computer Science', 91, 'A', 'B+'),
+(14, 'Noah Anderson', 18, '2005-03-05', 'Christopher Anderson', 'Samantha Anderson', 'Detroit', '345-678-9012', 'History', 83, 'C', 'AB+'),
+(15, 'Sophia Martinez', 19, '2005-09-10', 'Joshua Martinez', 'Natalie Martinez', 'Chicago', '456-789-0123', 'Literature', 89, 'A', 'A+'),
+(16, 'Benjamin Lee', 20, '2004-01-02', 'Andrew Lee', 'Kimberly Lee', 'Houston', '567-890-1234', 'Chemistry', 84, 'B', 'O-'),
+(17, 'Mia Rodriguez', 21, '2003-11-07', 'William Rodriguez', 'Ashley Rodriguez', 'Los Angeles', '678-901-2345', 'Physics', 88, 'A', 'B-'),
+(18, 'Liam Garcia', 18, '2005-07-22', 'Samuel Garcia', 'Gabriella Garcia', 'San Francisco', '789-012-3456', 'Economics', 90, 'C', 'O+'),
+(19, 'Emily Taylor', 22, '2002-05-18', 'John Taylor', 'Rebecca Taylor', 'Seattle', '890-123-4567', 'Geography', 86, 'B', 'A-'),
+(20, 'Michael Hernandez', 19, '2005-03-28', 'David Hernandez', 'Samantha Hernandez', 'Miami', '901-234-5678', 'English', 93, 'A', 'B+');
+(21, 'Emma Wilson', 20, '2004-09-14', 'Ethan Wilson', 'Madison Wilson', 'Dallas', '012-345-6789', 'Biology', 85, 'B', 'AB+'),
+(22, 'Alexander Kim', 19, '2005-02-19', 'Daniel Kim', 'Chloe Kim', 'Phoenix', '123-456-7890', 'Mathematics', 88, 'A', 'O-'),
+(23, 'Olivia Brown', 18, '2006-04-24', 'Joseph Brown', 'Lily Brown', 'Philadelphia', '234-567-8901', 'Chemistry', 91, 'C', 'B+'),
+(24, 'Noah Martinez', 21, '2003-08-29', 'Christopher Martinez', 'Evelyn Martinez', 'Boston', '345-678-9012', 'Physics', 84, 'B', 'A-'),
+(25, 'Sophia Nguyen', 22, '2002-06-30', 'William Nguyen', 'Sophia Nguyen', 'Denver', '456-789-0123', 'Economics', 89, 'A', 'AB-'),
+(26, 'Mia Patel', 19, '2005-12-05', 'Ethan Patel', 'Emily Patel', 'Detroit', '567-890-1234', 'Geography', 92, 'B', 'O+'),
+(27, 'Liam Wilson', 20, '2004-10-10', 'Michael Wilson', 'Madison Wilson', 'Chicago', '678-901-2345', 'English', 87, 'A', 'A-'),
+(28, 'Emily Kim', 21, '2003-07-15', 'David Kim', 'Grace Kim', 'Houston', '789-012-3456', 'Literature', 90, 'B', 'O-'),
+(29, 'Benjamin Brown', 18, '2006-03-20', 'Samuel Brown', 'Natalie Brown', 'San Francisco', '890-123-4567', 'Computer Science', 93, 'C', 'B+'),
+(30, 'Ava Johnson', 19, '2005-01-01', 'Benjamin Johnson', 'Hailey Johnson', 'Seattle', '901-234-5678', 'History', 86, 'A', 'AB+'),
+(31, 'Noah Lee', 20, '2004-08-16', 'Christopher Lee', 'Madison Lee', 'Miami', '012-345-6789', 'Chemistry', 89, 'B', 'A-'),
+(32, 'Mia Rodriguez', 21, '2003-04-21', 'William Rodriguez', 'Sophia Rodriguez', 'Dallas', '123-456-7890', 'Physics', 85, 'A', 'O-'),
+(33, 'William Hernandez', 18, '2006-02-28', 'Daniel Hernandez', 'Lily Hernandez', 'Phoenix', '234-567-8901', 'Economics', 92, 'C', 'A+'),
+(34, 'Emma Wilson', 22, '2002-11-03', 'Joseph Wilson', 'Chloe Wilson', 'Philadelphia', '345-678-9012', 'Geography', 87, 'B', 'B-'),
+(35, 'Liam Kim', 19, '2005-07-08', 'Michael Kim', 'Emily Kim', 'Boston', '456-789-0123', 'English', 90, 'A', 'AB-'),
+(36, 'Emily Nguyen', 20, '2004-05-13', 'David Nguyen', 'Grace Nguyen', 'Denver', '567-890-1234', 'Literature', 93, 'B', 'O+'),
+(37, 'Benjamin Patel', 21, '2003-09-18', 'Ethan Patel', 'Natalie Patel', 'Detroit', '678-901-2345', 'Computer Science', 88, 'A', 'A-'),
+(38, 'Ava Wilson', 18, '2006-01-23', 'Samuel Wilson', 'Sophia Wilson', 'Chicago', '789-012-3456', 'History', 91, 'C', 'B+'),
+(39, 'Noah Johnson', 19, '2005-03-28', 'Christopher Johnson', 'Hailey Johnson', 'Houston', '890-123-4567', 'Chemistry', 84, 'B', 'O-'),
+(40, 'Sophia Lee', 20, '2004-09-02', 'William Lee', 'Madison Lee', 'San Francisco', '901-234-5678', 'Physics', 87, 'A', 'A+');
+```
