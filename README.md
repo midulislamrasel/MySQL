@@ -510,8 +510,22 @@ CREATE TABLE student(
 ```
 
 ```sql
-INSERT INTO students (id, name, age, dateofbirth, father_name, mother_name, city, phone, subject, mark, student_group, blood_group)
-VALUES
+CREATE TABLE Students (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    dateofbirth DATE,
+    father_name VARCHAR(100),
+    mother_name VARCHAR(100),
+    city VARCHAR(100),
+    phone VARCHAR(20),
+    subject VARCHAR(100),
+    mark INT,
+    student_group VARCHAR(10),
+    blood_group VARCHAR(5)
+);
+
+INSERT INTO Students (id, name, age, dateofbirth, father_name, mother_name, city, phone, subject, mark, student_group, blood_group) VALUES
 (1, 'John Smith', 20, '2004-05-10', 'Michael Smith', 'Emily Smith', 'New York', '123-456-7890', 'Mathematics', 85, 'A', 'O+'),
 (2, 'Alice Johnson', 19, '2005-03-15', 'David Johnson', 'Sarah Johnson', 'Los Angeles', '987-654-3210', 'Science', 78, 'B', 'A-'),
 (3, 'Emma Brown', 21, '2003-11-20', 'James Brown', 'Olivia Brown', 'Chicago', '234-567-8901', 'Literature', 92, 'A', 'B+'),
@@ -531,7 +545,7 @@ VALUES
 (17, 'Mia Rodriguez', 21, '2003-11-07', 'William Rodriguez', 'Ashley Rodriguez', 'Los Angeles', '678-901-2345', 'Physics', 88, 'A', 'B-'),
 (18, 'Liam Garcia', 18, '2005-07-22', 'Samuel Garcia', 'Gabriella Garcia', 'San Francisco', '789-012-3456', 'Economics', 90, 'C', 'O+'),
 (19, 'Emily Taylor', 22, '2002-05-18', 'John Taylor', 'Rebecca Taylor', 'Seattle', '890-123-4567', 'Geography', 86, 'B', 'A-'),
-(20, 'Michael Hernandez', 19, '2005-03-28', 'David Hernandez', 'Samantha Hernandez', 'Miami', '901-234-5678', 'English', 93, 'A', 'B+');
+(20, 'Michael Hernandez', 19, '2005-03-28', 'David Hernandez', 'Samantha Hernandez', 'Miami', '901-234-5678', 'English', 93, 'A', 'B+'),
 (21, 'Emma Wilson', 20, '2004-09-14', 'Ethan Wilson', 'Madison Wilson', 'Dallas', '012-345-6789', 'Biology', 85, 'B', 'AB+'),
 (22, 'Alexander Kim', 19, '2005-02-19', 'Daniel Kim', 'Chloe Kim', 'Phoenix', '123-456-7890', 'Mathematics', 88, 'A', 'O-'),
 (23, 'Olivia Brown', 18, '2006-04-24', 'Joseph Brown', 'Lily Brown', 'Philadelphia', '234-567-8901', 'Chemistry', 91, 'C', 'B+'),
@@ -551,5 +565,18 @@ VALUES
 (37, 'Benjamin Patel', 21, '2003-09-18', 'Ethan Patel', 'Natalie Patel', 'Detroit', '678-901-2345', 'Computer Science', 88, 'A', 'A-'),
 (38, 'Ava Wilson', 18, '2006-01-23', 'Samuel Wilson', 'Sophia Wilson', 'Chicago', '789-012-3456', 'History', 91, 'C', 'B+'),
 (39, 'Noah Johnson', 19, '2005-03-28', 'Christopher Johnson', 'Hailey Johnson', 'Houston', '890-123-4567', 'Chemistry', 84, 'B', 'O-'),
-(40, 'Sophia Lee', 20, '2004-09-02', 'William Lee', 'Madison Lee', 'San Francisco', '901-234-5678', 'Physics', 87, 'A', 'A+');
+(40, 'Sophia Lee', 20, '2004-09-02', 'William Lee', 'Madison Lee', 'San Francisco', '901-234-5678', 'Physics', 87, 'A', 'A+'),
+(41, 'Olivia Brown', 21, '2003-11-04', 'Michael Brown', 'Sarah Brown', 'Los Angeles', '012-345-6789', 'Economics', 90, 'A', 'O-'),
+(42, 'Ethan Nguyen', 18, '2006-05-17', 'Daniel Nguyen', 'Emma Nguyen', 'Seattle', '123-456-7890', 'Geography', 88, 'B', 'A+'),
+(43, 'Mia Martinez', 19, '2005-02-28', 'Joshua Martinez', 'Olivia Martinez', 'Miami', '234-567-8901', 'English', 92, 'A', 'AB-'),
+(44, 'Liam Rodriguez', 20, '2004-10-11', 'Benjamin Rodriguez', 'Ava Rodriguez', 'Dallas', '345-678-9012', 'Literature', 87, 'B', 'B-'),
+(45, 'Sophia Hernandez', 21, '2003-08-15', 'William Hernandez', 'Emily Hernandez', 'Phoenix', '456-789-0123', 'Computer Science', 93, 'A', 'O+'),
+(46, 'Noah Kim', 18, '2006-03-20', 'Christopher Kim', 'Sophia Kim', 'Philadelphia', '567-890-1234', 'History', 84, 'B', 'B+'),
+(47, 'Emma Wilson', 19, '2005-01-03', 'Michael Wilson', 'Lily Wilson', 'Boston', '678-901-2345', 'Chemistry', 89, 'A', 'AB-'),
+(48, 'Benjamin Brown', 20, '2004-09-14', 'Daniel Brown', 'Grace Brown', 'Detroit', '789-012-3456', 'Physics', 86, 'B', 'O-'),
+(49, 'Ava Nguyen', 21, '2003-07-29', 'William Nguyen', 'Natalie Nguyen', 'San Francisco', '890-123-4567', 'Economics', 91, 'A', 'A+'),
+(50, 'Noah Martinez', 18, '2006-01-12', 'David Martinez', 'Hailey Martinez', 'Chicago', '901-234-5678', 'Geography', 88, 'B', 'B-'),
+(51, 'Mia Johnson', 19, '2005-03-05', 'Joseph Johnson', 'Lily Johnson', 'Houston', '012-345-6789', 'English', 93, 'A', 'O+'),
+(52, 'Liam Lee', 20, '2004-11-20', 'Samuel Lee', 'Sophia Lee', 'Los Angeles', '123-456-7890', 'Literature', 88, 'B', 'A-'),
+
 ```
