@@ -428,7 +428,7 @@ SET phone = "2323234" , age = 23
 WHERE id IN(3,5);
 ```
 
-## Commit & Rollback
+### Commit & Rollback
 
 ### Rollback
 
@@ -483,12 +483,12 @@ ADD PRIMARY KEY(id)
 
 ```
 
-### FOREIGN key comstraint
+## FOREIGN key comstraint
 
 - A foreign key is a key used to link two tables together.
 - A forengn key in one table used to point primary key in another table
 
-##### FIRST TIME TABLE CREATE
+### FIRST TIME TABLE CREATE
 
 ```sql
 CREATE TABLE student(
@@ -502,7 +502,7 @@ CREATE TABLE student(
 
 ```
 
-##### ALL READY CREAT A TABLE
+#### ALL READY CREAT A TABLE
 
 ```sql
    ALTER TABLE table_name
@@ -588,11 +588,305 @@ INSERT INTO Students (id, name, age, dateofbirth, father_name, mother_name, city
 the inner join selcts records that have mathching values in both tables
 
 | ID  | Name | age | city |
-| --- | ---- | --- | ---- |
-| 1   | Ram  | 19  | Dka  |
-| 2   | khan | 18  | Kal  |
+| --- | ---- | --- | ---- | ------------ |
+| 1   | Ram  | 19  | 1    |
+| 2   | khan | 18  | 2    |
+| 3   | khan | 18  | 1    |
+| 4   | khan | 18  | 3    | > Forign key |
 
-| ID  | Name | age | city |
-| --- | ---- | --- | ---- |
-| 1   | Ram  | 19  | Dka  |
-| 2   | khan | 18  | Kal  |
+| ID  | city   |
+| --- | ------ |
+| 1   | agra   |
+| 2   | Bhapal |
+| 3   | Delhi  |
+| 4   | Noida  |
+
+--^
+primari key
+
+#### Inner Join Query
+
+```sql
+SELECT columns
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name
+
+```
+
+##### short name table1 = t1 and table2 =t2
+
+```sql
+SELECT columns
+FROM table1 t1
+INNER JOIN table2 t2
+ON t1.column_name = t2.column_name
+
+```
+
+##### show name age rol from table1 and cunty phone show from table2
+
+```sql
+SELECT t1.neme,t1.age,t1.rol, t2.cunty,t2,phone
+FROM table1 t1
+INNER JOIN table2 t2
+ON t1.column_name = t2.column_name
+
+```
+
+##### Where used
+
+```sql
+SELECT t1.neme,t1.age,t1.rol, t2.cunty,t2,phone
+FROM table1 t1
+INNER JOIN table2 t2
+ON t1.column_name = t2.column_name
+WHERE t2.cunty = "Gangni";
+
+```
+
+##### Short name ascending order
+
+```sql
+SELECT t1.neme,t1.age,t1.rol, t2.cunty,t2,phone
+FROM table1 t1
+INNER JOIN table2 t2
+ON t1.column_name = t2.column_name
+WHERE t2.cunty = "Gangni"
+ORDER BY p.name
+
+```
+
+#### LEFT JOIN
+
+The LEFT JOIN in SQL basically returns all records from the left table and the matched records from the right tables. For example, let's say, we have two tables, Table A and Table B. When LEFT JOIN is applied on these two tables, all records from Table A and only the matched records from Table B will be displayed.
+
+#### RIGHT JOIN
+
+Right joins are similar to left joins except they return all rows from the table in the RIGHT JOIN clause and only matching rows from the table in the FROM clause. RIGHT JOIN is rarely used because you can achieve the results of a RIGHT JOIN by simply switching the two joined table names in a LEFT JOIN
+
+#### CROSS JOIN
+
+A cross join returns the Cartesian product of rows from the rowsets in the join. In other words, it will combine each row from the first rowset with each row from the second rowset.
+
+```sql
+SELECT columns
+FROM table1
+CROSS JOIN city
+```
+
+#### Inner join syntex for multiple tables
+
+```sql
+SELECT columns
+FROM table1
+INNER JOIN table
+ON table1.column_name = table2.coulmn_name
+INNER JOIN table3
+ON table1.column_name = table3.column_name;
+
+```
+
+##### Where used
+
+```sql
+SELECT columns
+FROM table1
+INNER JOIN table
+ON table1.column_name = table2.coulmn_name
+INNER JOIN table3
+ON table1.column_name = table3.column_name
+where table2.cityName = "Dhaka";
+```
+
+#### Group by Clause
+
+The group by clause is used in conjunction with the SELECT statement and Aggregate functions to group rows together by common column values.
+
+##### group by syntax
+
+```sql
+    SELECT city ,COUNT(city)
+    FROM table_name
+    WHERE condition
+    GROUP BY city
+
+```
+
+#### group 2 table Data too group by
+
+```sql
+    SELECT columns COUNT(p.city)
+    FROM table1 INNER JOIN table2
+    ON table1.column_name = table2.column_name;
+    WHERE condition
+    GROUP BY column_name
+```
+
+#### group Restul
+
+```sql
+    SELECT c.cityname, COUNT(p.city)
+    FROM personlal p INNER JOIN city c
+    ON c.city = p.cid
+    GROUP BY city
+```
+
+#### group where
+
+where used group by
+
+```sql
+    SELECT c.cityname, COUNT(p.city)
+    FROM personlal p INNER JOIN city c
+    ON c.city = p.cid
+    where p.age>=20
+    GROUP BY city
+```
+
+##### group HAVING
+
+having used group by down
+
+```sql
+    SELECT c.cityname, COUNT(p.city)
+    FROM personlal p INNER JOIN city c
+    ON c.city = p.cid
+    GROUP BY city
+    HAVING COUNT(p.city) > 3
+
+```
+
+#### SELECT With SubQUery Syntax
+
+```sql
+SELECT columns
+FROM table1
+WHERE
+column = (SELECT columns FROM table2 WHERE condition)
+```
+
+singel values chack
+
+```sql
+SELECT name FROM personal
+WHERE courses = (SELECT course_id FROM course WHERE course_name = "BBA");
+```
+
+Multipule values
+used IN
+
+```sql
+SELECT name FROM personal
+WHERE courses IN (SELECT course_id FROM course WHERE course_name IN("CSS" "BBA"));
+```
+
+#### EXISTS syntex
+
+if any single Record Exists Than parent command show restults
+
+```sql
+SELECT columns
+FROM table1
+WHERE
+EXISTS(SELECT columns FROM table2 WHERE condition)
+```
+
+#### NO EXISTS syntex
+
+if not any Single Record Exists Than Parent command show results
+
+```sql
+SELECT columns
+FROM table1
+WHERE
+NO EXISTS(SELECT columns FROM table2 WHERE condition)
+```
+
+#### UNION & UNION ALL syntex
+
+- Each SELECT statement within UNION must have the same number of columns
+- The columns must all have similer data types
+- The columns is each SELECT statement must alson be in the same order
+- number of columns same than used \*
+
+```sql
+    SELECT column1, column2 FROM table1
+    UNION / UNION ALL
+    SELECT column1, column2 FROM table2
+```
+
+Normal
+
+```sql
+SELECT name FROM students_table WHERE city = "Dhaka"
+UNION ALL
+SELECT name FROM lecturers_table WHERE city = "MIRPUR"
+```
+
+#### UNION to Subquery
+
+```sql
+SELECT name FROM students_table
+WHERE city = (SELECT cid FROM city WHERE cityname = "DHAKA")
+UNION ALL
+SELECT name FROM lecturers_table
+WHERE city = (SELECT cid FROM city WHERE cityname = "khulna")
+```
+
+### IF & CASE statement
+
+#### IF
+
+pass and faill condison chack
+
+```sql
+    SELECT id, name,percentage,
+    IF(percentage >= 33, "Pass", "Fail") AS Restul
+    FROM students
+```
+
+#### CASE Clause syntax
+
+Multiple condison
+GPA grade
+
+```sql
+    SELECT column1, colum2
+    CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN condition3 THEN result3
+    WHEN condition4 THEN result4
+    ELSE result alias_name
+    FROM table_name
+```
+
+```sql
+    SELECT id, name,percentage,
+    CASE
+        WHEN percentage >=80 AND percentage<=100 THEN "A+"
+        WHEN percentage >=65 AND percentage<=79 THEN "A-"
+        WHEN percentage >=60 AND percentage<=64 THEN "A"
+        WHEN percentage >=55 AND percentage<=59 THEN "B+"
+        WHEN percentage >=50 AND percentage<=54 THEN "B"
+        WHEN percentage >=40 AND percentage<=49 THEN "B-"
+        WHEN percentage >=0 AND percentage<=32 THEN "Fail"
+        ELSE "Not Corrent %"
+    END AS Grade
+    FROM students
+```
+
+#### CASE Update
+
+- change columes values 3 and 4
+
+```sql
+    UPDATE student SET
+    percentage = ( CASE id
+        WHEN 3 THEN 39
+        WHEN 4 THEN 60
+    END
+    )
+    WHERE id INT (3,7)
+```
