@@ -588,11 +588,11 @@ INSERT INTO Students (id, name, age, dateofbirth, father_name, mother_name, city
 the inner join selcts records that have mathching values in both tables
 
 | ID  | Name | age | city |
-| --- | ---- | --- | ---- | ------------ |
+| --- | ---- | --- | ---- |
 | 1   | Ram  | 19  | 1    |
 | 2   | khan | 18  | 2    |
 | 3   | khan | 18  | 1    |
-| 4   | khan | 18  | 3    | > Forign key |
+| 4   | khan | 18  | 3    |
 
 | ID  | city   |
 | --- | ------ |
