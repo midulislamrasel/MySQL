@@ -482,26 +482,26 @@ rollback;
 ```
 
 #### Adding a new column:
-```
+```sql
 ALTER TABLE my_table
 ADD new_column_name INT;
 ```
 
 #### Modifying column data type:
-```
+```sql
 ALTER TABLE my_table
 MODIFY column_name VARCHAR(100);
 ```
 
 #### Changing a column name:
-```
+```sql
 ALTER TABLE my_table
 CHANGE old_column_name new_column_name VARCHAR(100);
 
 ```
 
 #### Setting a column as NOT NULL:
-```
+```sql
 ALTER TABLE my_table
 MODIFY column_name VARCHAR(100) NOT NULL;
 ```
@@ -509,7 +509,7 @@ MODIFY column_name VARCHAR(100) NOT NULL;
 
 
 #### Dropping a column:
-```
+```sql
 ALTER TABLE my_table
 DROP COLUMN column_name;
 ```
