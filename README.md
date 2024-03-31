@@ -1,4 +1,4 @@
-Here's a short explanation of each abbreviation you provided in the context of MySQL:
+#### MySQL:
 
 1. **PK**: Stands for Primary Key. It uniquely identifies each record in a table. There can be only one Primary Key in a table.
   
@@ -16,7 +16,6 @@ Here's a short explanation of each abbreviation you provided in the context of M
 
 8. **G**: This abbreviation isn't standard in MySQL. It could potentially refer to "Generated Columns," introduced in MySQL 5.7, which allows defining columns computed from other columns.
 
-Please note that some abbreviations may not be standard MySQL terms, and their meanings may vary depending on the context or specific use case.
 
 
 
