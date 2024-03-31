@@ -1,3 +1,25 @@
+Here's a short explanation of each abbreviation you provided in the context of MySQL:
+
+1. **PK**: Stands for Primary Key. It uniquely identifies each record in a table. There can be only one Primary Key in a table.
+  
+2. **NN**: Stands for Not Null. It indicates that a column cannot have a NULL value. That is, it must contain a value.
+
+3. **UQ**: Stands for Unique. It ensures that all values in a column are unique, meaning no two rows can have the same value in that column.
+
+4. **BIN**: This abbreviation isn't standard in MySQL. It could potentially refer to "Binary," indicating a binary data type or a binary collation for text data.
+
+5. **UN**: Stands for Unique Index. It is similar to UQ but creates a unique index on a column or set of columns.
+
+6. **ZF**: This abbreviation isn't standard in MySQL. It could potentially refer to "Zero Fill," which is used with numeric data types to pad the displayed value with leading zeros.
+
+7. **AI**: Stands for Auto Increment. It's typically used with an integer column to automatically generate a unique value for each new row inserted into a table, typically used as a primary key.
+
+8. **G**: This abbreviation isn't standard in MySQL. It could potentially refer to "Generated Columns," introduced in MySQL 5.7, which allows defining columns computed from other columns.
+
+Please note that some abbreviations may not be standard MySQL terms, and their meanings may vary depending on the context or specific use case.
+
+
+
 #### Create table
 
 ```sql
