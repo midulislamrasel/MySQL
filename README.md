@@ -481,6 +481,43 @@ rollback;
 
 ```
 
+#### Adding a new column:
+```
+ALTER TABLE my_table
+ADD new_column_name INT;
+```
+
+#### Modifying column data type:
+```
+ALTER TABLE my_table
+MODIFY column_name VARCHAR(100);
+```
+
+#### Changing a column name:
+```
+ALTER TABLE my_table
+CHANGE old_column_name new_column_name VARCHAR(100);
+
+```
+
+#### Setting a column as NOT NULL:
+```
+ALTER TABLE my_table
+MODIFY column_name VARCHAR(100) NOT NULL;
+```
+
+
+
+#### Dropping a column:
+```
+ALTER TABLE my_table
+DROP COLUMN column_name;
+```
+
+
+
+
+
 ### PRIMARY KEY
 
 FIRST TIME TABLE CREARE
