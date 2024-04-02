@@ -88,6 +88,12 @@ VALUES
 
 ```
 
+
+#### update UNQUE key
+```sql
+ALTER TABLE `registration` ADD UNIQUE(`password`);
+```
+
 ### show data from Tables with SQL
 
     SELECT column1, column2, column3
